@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-pet_name",
+      "2": "I-pet_name",
+      "3": "L-pet_name",
+      "4": "U-pet_name",
+      "5": "B-pet_type",
+      "6": "I-pet_type",
+      "7": "L-pet_type",
+      "8": "U-pet_type",
+      "9": "B-user_name",
+      "10": "I-user_name",
+      "11": "L-user_name",
+      "12": "U-user_name",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-pet_name": 1,
+      "I-pet_name": 2,
+      "L-pet_name": 3,
+      "U-pet_name": 4,
+      "B-pet_type": 5,
+      "I-pet_type": 6,
+      "L-pet_type": 7,
+      "U-pet_type": 8,
+      "B-user_name": 9,
+      "I-user_name": 10,
+      "L-user_name": 11,
+      "U-user_name": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

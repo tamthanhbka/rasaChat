@@ -1,0 +1,19 @@
+version: "3.1"
+
+stories:
+
+- story: chao hoi nho ten
+  steps:
+  - intent: greet
+  - action: utter_ask_name
+  - intent: answer_name
+  - action: utter_greet_name
+  - intent: goodbye
+  - action: utter_goodbye
+
+# - story: hoi benh
+#   steps:
+#   - intent: trieu_chung_chan_an
+#   - action: utter_chan_an
+#   - action: utter_hoi_them_trieu_chung
+

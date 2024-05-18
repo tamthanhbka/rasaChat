@@ -1,0 +1,265 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - ê
+    - xin chào
+    - chào bạn
+    - chào shop
+    - chào ad
+    - chào buổi sáng
+    - chào buổi tối
+    - này, cho hỏi tí
+    - cho tôi hỏi chút
+    - chào
+    - hi
+    - hello
+    - ây
+    - này bot ơi
+    - hello bot
+    - alo
+    - Lô
+    - bot ơi
+    - có ai không
+    - tôi cần hỗ trợ
+
+
+- intent: answer_name
+  examples: |
+    - Tôi tên là [Nam]{"entity": "user_name"}
+    - Chị tên là [Hoa]{"entity": "user_name"}
+    - Anh tên là [Long]{"entity": "user_name"}
+    - Mình tên là [Phúc]{"entity": "user_name"}
+    - Mình tên [Phát]{"entity": "user_name"}
+    - Em tên [Hà]{"entity": "user_name"} nhé
+    - Huy[Nam]{"entity": "user_name"}
+    - Gọi mình là [Phụng]{"entity": "user_name"} nha
+    - Tôi tên [Hoàng]{"entity": "user_name"}
+    - chị tên [Cúc]{"entity": "user_name"}
+    - anh tên [Đức]{"entity": "user_name"}
+    - [Tuấn]{"entity": "user_name"} nhé
+    - [Bình]{"entity": "user_name"}
+    - [Lĩnh]{"entity": "user_name"}
+    - [Viễn]{"entity": "user_name"}
+    - [Duy]{"entity": "user_name"}
+    - [Tú]{"entity": "user_name"}
+    - [Tâm]{"entity": "user_name"}
+    - [Xuân]{"entity": "user_name"}
+    - [Kiều]{"entity": "user_name"}
+    - [Thành]{"entity": "user_name"}
+    - [Đăng]{"entity": "user_name"}
+    - [Bình]{"entity": "user_name"}
+    - [Đạt]{"entity": "user_name"}
+    - [Vy]{"entity": "user_name"}
+    - [Loan]{"entity": "user_name"}
+    - [Luân]{"entity": "user_name"}
+    - [Quang]{"entity": "user_name"}
+    - [Thuận]{"entity": "user_name"}
+    - [Trọng]{"entity": "user_name"}
+    - [An]{"entity": "user_name"}
+    - [Kim]{"entity": "user_name"}
+    - [Hằng]{"entity": "user_name"}
+    - [Cường]{"entity": "user_name"}
+    - [Phú]{"entity": "user_name"}
+    - [Thiện]{"entity": "user_name"}
+
+- intent: greet_pet
+  examples: |
+    - Tôi đang nuôi một bạn [chó]{"entity" : "pet_type"} tên là [Gấu]{"entity" : "pet_name"}
+    - Tôi đang nuôi một bạn [mèo]{"entity" : "pet_type"} tên là [Monney]{"entity" : "pet_name"}
+    - Bé pet nhà tôi tên là [Mon]{"entity" : "pet_type"}
+    - [Miumiu]{"entity" : "pet_name"}
+    - Bé [mèo]{"entity" : "pet_type"} nhà tôi tên là [Monney]{"entity" : "pet_name"}
+    - Pet nhà mình tên [miu]{"entity" : "pet_name"} nhé
+
+
+- intent: goodbye
+  examples: |
+    - bai
+    - tạm biệt
+    - chào
+    - bye
+    - cút đây
+    - té đây
+    - ô kê
+    - bái bai
+    - chào nhá
+    - oke, cảm ơn
+    - ừ, tôi cảm ơn bot
+    - oke
+    - cảm ơn bot, chào nhé
+    - tạm biệt bot
+    - liên hệ sau nhé
+
+- intent: trieu_chung_chan_an
+  examples: |
+    - Chó của tôi đang bị chán ăn
+    - em chó nhà tôi mấy hôm nay bỏ ăn
+    - bé cưng của tôi ăn ít hơn bình thường
+    - bé mèo nhà tôi không ăn uống gì cả
+    - bé cún nhà tôi chán ăn
+    - em mèo của tôi không ăn hạt
+    - mèo của tôi bị chán ăn
+    - em pet nhà tôi bỏ ăn
+    - bé cún của tôi không ăn cơm
+    - bé miu của tôi chán ăn
+    - em chó của tôi bị chán ăn mấy hôm nay rồi
+    - pet của tôi bỏ ăn mấy hôm nay rồi ấy
+
+
+- intent: trieu_chung_buon_non
+  examples: |
+    - Chó của tôi có triệu chứng buồn nôn
+    - Bé nhà tôi nôn ra dịch nhớt 
+    - bé cún của tôi bị nôn
+    - bé miu nhà tôi bị nôn ra máu
+    - bé cún nhà tôi đang bị ói mửa
+    - chó nhà tôi đang bị nôn mửa
+    - bé cún nhà tôi nôn mửa liên tục
+    - bé cún nhà tôi đang bị nôn
+
+- intent: trieu_chung_ho
+  examples: |
+    - bé pet nhà tôi bị ho ra đờm
+    - chó của tôi ho ra máu
+    - chó của tôi bị ho liên tục
+    - bé miu của tôi bị ho và sổ mũi
+    - em mèo nhà tôi ho ra đờm nhầy
+    - bé mèo nhà tôi ho liên tục
+    - chó nhà tôi đang bị ho khạc liên tục
+    - bé pet nhà tôi hay ho khạc vào ban đêm và sáng sớm
+    - bé cún nhà tôi có những cơn ho kéo dài
+    - mèo nhà tôi đang bị ho liên tục
+
+- intent: trieu_chung_kho_tho
+  examples: |
+    - Chó nhà tôi bị khó thở
+    - bé cún nhà tôi thở khò khè
+    - bé mèo nhà tôi hơi thở yếu ớt
+    - mèo của tôi đang có triệu chứng khó thở
+    - bé pet của tôi thở khó
+    - em chó của tôi đang khó thở
+    - em chó của hơi thở bị hôi
+    - em mèo nhà tôi thở khò khè yếu ớt
+    - Chó của tôi bị thở khó
+    - Hơi thở của em pet nhà tôi bị hôi
+
+- intent: trieu_chung_tieu_chay
+  examples: |
+    - Bé chó nhà tôi bị tiêu chảy
+    - Mèo nhà tôi bị tiêu chảy
+    - Bé pet nhà tôi bị tiêu chảy
+    - bé miu nhà tôi bị đi ngoài
+    - Chó nhà tôi tiêu chảy ra máu
+    - bé cún nhà tôi đang bị tiêu chảy
+    - bé pet của tôi bị tiêu chảy ra máu
+    - chó của tao tiêu chảy
+    - nó đang bị tiêu chảy
+    - chó tiêu chảy ra máu
+    - mèo tiêu chảy ra máu
+    - pet của tao bị ẻ chảy
+    - chó của tao đang ẻ chảy
+    - mèo bị ẻ chảy
+    - pet đi ngoài ra máu
+
+- intent: trieu_chung_sot
+  examples: |
+    - pet nhà tôi đang bị sốt cao
+    - pet nhà tôi sốt rất cao
+    - chó nhà tôi đang sốt
+    - mèo nhà tôi đang bị sốt
+    - chó nhà tôi đang bị sốt
+    - chó đang sốt cao
+    - mèo đang sốt cao
+    - pet đang sốt rất cao
+    - bé cún nhà tôi đang sốt cao lắm
+    - bé miu của tôi đang bị sốt cao
+    - tôi thấy bé miu có biểu hiện sốt
+    - tôi thấy pet của tôi đang sốt khá cao
+    - nó đang bị sốt khá cao
+    - thú cưng của tôi đang sốt cao
+
+- intent: trieu_chung_xuat_huyet_duoi_da
+  examples: |
+    - tôi thấy chó nhà tôi bị xuất huyết dưới da
+    - chó bị xuất huyết ở da
+    - chó bị nổi nốt giống như xuất huyết ở da
+    - chó bị nổi nốt đỏ dưới da
+    - pet bị nổi nốt đỏ dưới da
+    - tôi thấy dưới da của bé pet có nốt đỏ
+    - dưới da của be pet có nốt đỏ giống như xuất huyết
+    - Thú cưng của tôi xuất hiện các đốm đỏ trên da
+    - Tôi thấy da của chó có những điểm đỏ rõ ràng
+    - Thú cưng của tôi có các vết chảy máu nhỏ dưới da
+    - Chó của tôi có các vết thâm đen xuất hiện dưới da
+    - Các vết đỏ dưới da của chó nhà tôi ngày càng trở nên rõ ràng
+    - Tôi nhận thấy các đốm máu dưới da của chó trong những khu vực nhất định
+    - Thú cưng của tôi có các vết đỏ dưới da lan ra từ một vị trí cụ thể
+    - Da của chó nhà tôi có các vết đỏ nổi lên
+    - Da mèo của tôi có các điểm máu dưới da
+
+- intent: trieu_chung_vang_da
+  examples: |
+    - Mèo nhà tôi có da trở nên màu vàng nhạt
+    - Chó của tôi có da bắt đầu chuyển sang màu vàng
+    - Thú cưng của tôi có da trở nên vàng ở các vùng nhất định
+    - Tôi nhìn thấy da chó nhà tôi có vẻ đậm màu vàng
+    - Da mèo của tôi có vẻ màu vàng không đồng nhất
+    - Chó của tôi có da vàng xuất hiện đồng loạt trên toàn bộ cơ thể
+    - Da chó của tôi có màu vàng lan rộng từ một vị trí cụ thể
+    - Mèo nhà tôi có da trở nên vàng
+    - Chó của tôi có triệu chứng vàng da
+    - Tôi nhìn thấy da mèo mình bắt đầu vàng
+    - Da chó nhà tôi có màu vàng xuất hiện
+    - chó nhà tôi bắt đầu xuất hiện triệu chứng vàng da
+    - chó bị vàng da
+    - pet của tôi bị vàng da
+    - bé cún bị vàng da
+    - nó bị vàng da
+    - mèo bị vàng da
+    - bé miu bị vàng da
+    - pet xuất hiện triệu chứng vàng da
+
+- intent: trieu_chung_chuong_bung
+  examples: |
+    - 
+
+- intent: trieu_chung_chay_nuoc_mat
+  examples: |
+    - 
+
+- intent: trieu_chung_co_giat
+  examples: |
+    - 
+
+- intent: trieu_chung_sua_bat_thuong
+  examples: |
+    - 
+
+- intent: trieu_chung_mat_duc_do_ngau
+  examples: |
+    - 
+
+- intent: trieu_chung_rung_long
+  examples: |
+    - 
+
+- intent: trieu_chung_chay_dai_sui_bot_trang
+  examples: |
+    -
+
+- intent: trieu_chung_da_lo_loet
+  examples: |
+    -  
+    
+- intent: bot_challenge
+  examples: |
+    - Mày là bot ư?
+    - Mày là một con người phải không?
+    - Có phải tôi đang nói chuyện với bot không?
+    - Có phải tôi đang nói chuyện với con người không?
+    - Bạn có phải bot không?
+    - Tôi đang nói chuyện với bot phải không?
+    - Tôi đang nói chuyện với người thật hay với bot vậy?
+    - Bạn có phải là con người không?

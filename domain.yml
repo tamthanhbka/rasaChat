@@ -1,0 +1,112 @@
+version: "3.1"
+
+intents:
+  - greet
+  - answer_name
+  - greet_pet
+  - goodbye
+  - trieu_chung_chan_an
+  - trieu_chung_buon_non
+  - trieu_chung_ho
+  - trieu_chung_kho_tho
+  - trieu_chung_tieu_chay
+  - trieu_chung_sot
+  - trieu_chung_xuat_huyet_duoi_da
+  - trieu_chung_vang_da
+  - trieu_chung_chuong_bung
+  - trieu_chung_chay_nuoc_mat
+  - trieu_chung_co_giat
+  - trieu_chung_sua_bat_thuong
+  - trieu_chung_mat_duc_do_ngau
+  - trieu_chung_rung_long
+  - trieu_chung_chay_dai_sui_bot_trang
+  - trieu_chung_da_lo_loet
+  - bot_challenge
+
+entities:
+  - cust_sex
+  - user_name
+  - pet_type
+  - pet_name
+
+slots: 
+  cust_sex:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: cust_sex
+  user_name:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: user_name
+  pet_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: pet_type
+  pet_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: pet_name
+
+responses:
+  utter_greet:
+  - text: "Xin chào quý khách!\nTôi là chatbot của hệ thống petcare, tôi có thể giúp gì cho bạn nhỉ?"
+  - text: "Chào bạn! Bạn cần Bot giúp gì không?"
+  - text: "Xin chào!\nTôi là chatbot của hệ thống petcare, rất hân hạnh được trò chuyện với bạn?"
+
+  utter_ask_name: 
+  - text: "Xin chào quý khách! Quý khách có thể cho tôi xin tên để tiện xưng hô không ạ?"
+
+  utter_greet_name:
+  - text: "Xin chào {user_name}! Tôi có thể giúp gì cho bạn được nhỉ?"
+
+  utter_hoi_tinh_trang: 
+  - text: "Vâng, cảm ơn {user_name}, không biết là hiện tại {user_name} đang cần tôi tư vấn về vấn đề gì ạ?"
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Vâng, chào {user_name} ạ. Chúc bạn một ngày tốt lành!"
+  - text: "Vâng, chào {user_name} nhé, chúc {user_name} một ngày vui vẻ!"
+  - text: "Vâng, chào {user_name} nhé. Chúc {user_name} và bé pet một ngày tốt lành!"
+
+  utter_iamabot:
+  - text: "Dạ, tôi là một con Bot, được tạo nên bởi chị Thanh Tâm xinh gái"
+
+  utter_chan_an:
+  - text: "Triệu chứng chán ăn là một triệu chứng thường gặp ở giai đoạn đầu của các loại bệnh sau đây:\n 
+            1.Viêm gan truyền nhiễm\n
+            2.Viêm dạ dày\n
+            3.Viêm phổi\n
+            4.Viêm tử cung\n
+            5.Tiêu chảy\n
+            6.Rối loạn tiêu hóa\n
+            7.Bệnh sán\n
+            8.Bệnh về răng lợi\n
+          Ngoài ra cũng có thể bé Pet nhà mình đang dùng một loại thuốc nào đó có tác dụng phụ dẫn đến chán ăn.\n Việc thay đổi môi trường sống cũng làm cho bé Pet stress và chán ăn, bạn hãy để ý hơn đến tâm lý của bé nhé. Để nhanh chóng biết được chính xác tình trạng của bé nhà mình, bạn hãy đưa bé đi khám ở một cơ sở chăm sóc thú y gần nhất nhé!"
+  - text: "Bạn có quá nuông chiều bé Pet nhà mình không, đôi khi bé chán ăn chỉ vì do bé chỉ muốn ăn những thức ăn ngon hơn đó."
+  - text: "Việc thay đổi môi trường sống hoặc thay đổi ngoại hình cũng dẫn đến tâm lý của bé pet thay đổi sinh ra chán ăn đó.\nBạn hãy theo dõi thêm các biểu hiện của bé nhé."
+
+  utter_buon_non:
+  - text: "Triệu chứng nôn mửa có thể là do bé Pet nhà mình ăn quá nhanh dẫn đến chướng bụng, khó tiêu.\nBạn nên lau dọn sạch sẽ để tránh bé Pet ăn lại những phần thức ăn đã bị nôn ra.\nSau khoảng vài giờ, thức ăn sẽ được tiêu hóa hết và sẽ không có vấn đề gì nữa, bạn không cần quá lo lắng nhé!"
+  - text: "Triệu chứng nôn mửa có thể do bé Pet nhà mình không cẩn thận bị hóc xương hoặc dị vật, bạn không nên tự cho tay vào miệng bé để lấy dị vật ra mà nên đưa đến cơ sở thú y gần nhất để nhờ bác sĩ can thiệp và giúp đỡ nhé."
+  - text: "Pet bị nôn mửa là biểu hiện của nhiều bệnh lý như viêm dạ dạy, viêm gan, nhiễm khuẩn đường ruột, ... bạn nên cho bé Pet của mình đi khám ở cơ sở thú y gần nhất nhé!"
+
+  utter_hoi_them_trieu_chung:
+  - text: "Bé nhà mình có thêm các triệu chứng nào khác không ạ?"
+  - text: "Ngoài triệu chứng trên thì bé nhà mình có triệu chứng nào nữa không ạ?"
+  - text: "Bé có các triệu chứng nào khác nữa không ạ?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

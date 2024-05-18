@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+
+# - rule: Chào hỏi
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+
+- rule: Hỏi bệnh chán ăn
+  steps: 
+  - intent: trieu_chung_chan_an
+  - action: utter_chan_an
+
+- rule: Hỏi bệnh buồn nôn
+  steps:
+  - intent: trieu_chung_buon_non
+  - action: utter_buon_non
+  
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
