@@ -107,7 +107,6 @@ nlu:
     - em chó của tôi bị chán ăn mấy hôm nay rồi
     - pet của tôi bỏ ăn mấy hôm nay rồi ấy
 
-
 - intent: trieu_chung_buon_non
   examples: |
     - Chó của tôi có triệu chứng buồn nôn
